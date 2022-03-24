@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang:en>
+<html>
+    <head>
+        <title>
+            Calculator
+        </title>
+        <style>
+            body{
+                background-color: rgb(248, 246, 244);
+            }
+            *{
+            box-sizing:border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing:border-box;
+            }
+            .wrap{
+                
+                width: 400px;
+                margin-left: 300px;
+                height:auto;
+                background: rgb(94, 94, 83);
+                padding: 15px;
+
+            }
+            
+            input[type=text]{
+                width:100%;
+                padding:10px;
+                font-size:22px;
+                font-weight: bold;
+                margin-top: 20px;
+                border-radius: 5px;
+
+
+            }
+            input[type=button]{
+                width: 89px;
+                padding: 10px;
+                font-size: 22px;
+                font-weight:bold;
+                border-radius: 5px;
+                background-color: rgb(236, 231, 225);
+            }
+            #del{
+                width:100%;
+
+            }
+            #history{
+                height: 525px;
+                display: flex;
+                box-sizing: border-box;
+                background-color: rgb(94, 94, 83);
+                width:250px;
+                margin-right: 200px;
+                margin-top: 0px;
+                color:aliceblue;
+                border:2px black;
+                overflow-y: scroll;
+                padding:15px;
+                padding-top: 20px;
+            }
+            #history::-webkit-scrollbar{
+                width:0;
+            }
+            #history h1{
+                padding-top: 7px;
+                font-size:20px; 
+            }
+            #history :last-child{
+                font-size: 1.3em;
+                font-weight: 500;
+                color: alicebluez;
+
+            }   
+        </style>
+    </head>
+
+    <body>
+        <table>
+            <tr>
+            <td>
+            <div class="wrap">
+            <a href="assign_sci.html" style="background-color:black;color:aliceblue">SCIENTIFIC</a>
+            <h2 style="color: aliceblue; text-align: center; padding-left:10px;font-style:bold">Calculator</h2>
+            <form name="cal">
+            <input type="text" name="display">
+            <br><br>
+            <div >
+            <input type="button" value="7" onclick="document.cal.display.value +='7'">
+            <input type="button" value="8" onclick="document.cal.display.value +='8'">
+            <input type="button" value="9" onclick="document.cal.display.value +='9'">
+            <input type="button" value="+" onclick="document.cal.display.value +='+'">
+            <br><br>
+            <input type="button" value="4" onclick="document.cal.display.value +='4'">
+            <input type="button" value="5" onclick="document.cal.display.value +='5'">
+            <input type="button" value="6" onclick="document.cal.display.value +='6'">
+            <input type="button" value="-" onclick="document.cal.display.value +='-'">
+            <br><br>
+            <input type="button" value="1" onclick="document.cal.display.value +='1'">
+            <input type="button" value="2" onclick="document.cal.display.value +='2'">
+            <input type="button" value="3" onclick="document.cal.display.value +='3'">
+            <input type="button" value="*" onclick="cal.display.value+='*'">
+            <br><br>
+            <input type="button" value="0" onclick="document.cal.display.value +='0'">
+            <input type="button" value="/" onclick="document.cal.display.value +='/'">
+            <input type="button" value="%" onclick="document.cal.display.value +='%'">
+            <input type="button" value="=" onclick="document.cal.display.value =calculation(document.cal.display.value);">
+            <br><br>
+            <input type="button"  value="CLEAR" onclick="document.cal.display.value =''" id="del">
+            </form>
+            <br>
+            </td>
+            <td>
+            </div>
+            <div id='history'>
+                <h1>HISTORY:</h1>
+                <br>
+                <p id="his"></p>
+            </div>
+            </td>
+            </tr>
+            <script type="text/javascript">
+                let history=document.getElementById('history');
+                var Historydata=[];
+                var expression='';
+               var  res='';
+    
+                function calculation(v){
+                    console.log("in cal");
+                    expression=v;
+                    res=eval(v);
+                    Historydata.push({"expression":expression,"result":res})
+                    showHistory();
+
+                    expression='';
+                    res='';
+                    return eval(v);
+                }
+    
+                function showHistory(){
+                    var log=document.getElementById("his");
+                    var string=''
+                    for (var key in Historydata){
+                        string+=""+ Historydata[key]["expression"]+ " = "+ Historydata[key]["result"] + "<br>";
+                    }
+                    log.innerHTML=string;
+                    // log.innerHTML="work";
+                    console.log(string);
+                }
+            </script> 
+        </body> 
+</html>
