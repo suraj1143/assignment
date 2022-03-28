@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang:en>
+<html>
+    <head>
+        <title>
+            Normal Calculator
+        </title>
+        <link rel="stylesheet" href="normal.css">
+        <script src="normal.js"></script>   
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>
+                <div class="wrap">
+                <a href="assign_sci.html">SCIENTIFIC</a>
+                <h2 >Calculator</h2>
+                <form name="cal">
+                <input type="text" name="display">
+                <br><br>
+                <div >
+                <input type="button" value="7" onclick="document.cal.display.value +='7'">
+                <input type="button" value="8" onclick="document.cal.display.value +='8'">
+                <input type="button" value="9" onclick="document.cal.display.value +='9'">
+                <input type="button" value="+" onclick="document.cal.display.value +='+'">
+                <br><br>
+                <input type="button" value="4" onclick="document.cal.display.value +='4'">
+                <input type="button" value="5" onclick="document.cal.display.value +='5'">
+                <input type="button" value="6" onclick="document.cal.display.value +='6'">
+                <input type="button" value="-" onclick="document.cal.display.value +='-'">
+                <br><br>
+                <input type="button" value="1" onclick="document.cal.display.value +='1'">
+                <input type="button" value="2" onclick="document.cal.display.value +='2'">
+                <input type="button" value="3" onclick="document.cal.display.value +='3'">
+                <input type="button" value="*" onclick="cal.display.value+='*'">
+                <br><br>
+                <input type="button" value="0" onclick="document.cal.display.value +='0'">
+                <input type="button" value="/" onclick="document.cal.display.value +='/'">
+                <input type="button" value="%" onclick="document.cal.display.value +='%'">
+                <input type="button" value="=" onclick="document.cal.display.value =calculation(document.cal.display.value);">
+                <br><br>
+                <input type="button"  value="CLEAR" onclick="document.cal.display.value =''" id="del">
+                </form><br>
+                </td>
+                <td>
+                </div>
+                    <div id='history'>
+                        <h1>HISTORY:</h1>
+                        <br>
+                        <p id="his"></p>
+                    </div>
+                </td>
+                </tr>
+        </table>
+    </body> 
+</html>

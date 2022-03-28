@@ -1,0 +1,85 @@
+
+body{
+    background-color: rgb(248, 246, 244);
+}
+*{
+    box-sizing:border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:border-box;
+}
+.wrap{
+    width: 57.5%;
+    margin-left: 300PX;
+    height:auto;
+    background: rgb(94, 94, 83);
+    padding: 15px;
+}
+.wrap a{
+    background-color:black;
+    color:aliceblue;
+}
+.wrap h2{
+    color: aliceblue; 
+    text-align: center; 
+    padding-left:10px;
+    font-style:bold;
+}
+input[type=text]{
+    width:100%;
+    padding:10px;
+    font-size:22px;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 5px;
+
+
+}
+input[type=button]{
+    width: 24%;
+    padding: 10px;
+    font-size: 22px;
+    font-weight:bold;
+    border-radius: 5px;
+    background-color: rgb(236, 231, 225);
+}
+#history{
+    height: 662px;
+    display: flex;
+    box-sizing: border-box;
+    background-color: rgb(94, 94, 83);
+    width:60%;
+    margin-right: 200px;
+    margin-top: 0px;
+    color:aliceblue;
+    border:2px black;
+    overflow-y: scroll;
+    padding:15px;
+    padding-top: 20px;
+    padding-left: 10px;
+    
+}
+#history h1{
+    padding-top: 8px;
+    font-size:20px; 
+}
+#history :last-child{
+    font-size: 1.3em;
+    font-weight: 500;
+    color: alicebluez;
+
+}   
+.wd button{
+    width:25%;
+    padding: 10px;
+    padding-left: 50px;
+    font-size: 22px;
+    font-weight:bold;
+    border-radius: 5px;
+    background-color: rgb(236, 231, 225);
+}
+.hey{
+    padding-left: 50px;
+}
+
+                                                        
+            
